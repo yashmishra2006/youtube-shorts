@@ -1,15 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 👇 REQUIRED for static HTML output
-  output: "export",
-
-  // 👇 Required because static export cannot run Image Optimization
+  output: 'export',
+  basePath: '/youtube-short-downloader',
+  assetPrefix: '/youtube-short-downloader/',
   images: {
-    unoptimized: true,
-  },
+    unoptimized: true
+  }
+}
 
-  // 👇 Optional but recommended: avoids trailing-slash confusion
-  trailingSlash: true,
-};
-
-export default nextConfig;
+module.exports = nextConfig
