@@ -4,8 +4,8 @@ const nextConfig = {
   basePath: '/youtube-short-downloader',
   assetPrefix: '/youtube-short-downloader/',
   images: {
-    unoptimized: true
-  }
+    unoptimized: true,
+  },
 }
 
-module.exports = nextConfig
+export default nextConfig
