@@ -7,7 +7,7 @@ const POP = () => {
   return (
     <div className="mt-8 dark:bg-black">
       <div className="overflow-hidden text-white shadow-lg rounded-3xl">
-        <Link href="/">
+        <Link href="https://capsai.co/">
           {/* Large screen image */}
           <img
             src="https://cdn.capsai.co/pop3.webp"

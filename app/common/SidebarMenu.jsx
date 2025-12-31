@@ -28,7 +28,7 @@ const SidebarMenu = ({
       } flex flex-col gap-7 h-screen w-[80%] z-50 bg-transperant dark:bg-[#29292B] dark:border-[#29292B] p-5 pl-7 sm:pl-15`}
     >
       <div className="flex items-center justify-between text-black">
-        <Link href="/">
+        <Link href="https://capsai.co/">
           <Image
             width={150}
             height={60}
@@ -48,14 +48,14 @@ const SidebarMenu = ({
       <div className="mt-[50px] flex flex-col gap-7">
         {loggedIn ? (
           <>
-            <Link href="/workspace/projects">My folder</Link>
-            <Link href="/pricing">Increase min</Link>
-            <Link href="/feedback">Feedback</Link>
+            <Link href="https://capsai.co/workspace/projects">My folder</Link>
+            <Link href="https://capsai.co/pricing">Increase min</Link>
+            <Link href="https://capsai.co/feedback">Feedback</Link>
           </>
         ) : (
           <>
-            <Link href="/pricing">Pricing</Link>
-            <Link href="/#features">Features</Link>
+            <Link href="https://capsai.co/pricing">Pricing</Link>
+            <Link href="https://capsai.co/#features">Features</Link>
           </>
         )}
       </div>
@@ -93,7 +93,7 @@ const SidebarMenu = ({
               )}
             </div>
             <Link
-              href="/"
+              href="https://capsai.co/"
               className="flex items-center gap-1 cursor-pointer flex-shrink-0"
               onClick={handleLogout}
             >
@@ -107,8 +107,8 @@ const SidebarMenu = ({
             </Link>
           </div>
           <div className="space-x-3 text-[12px] mt-2">
-            <Link href="/terms-conditions" className="text-[#72727]">Terms & Conditions</Link>
-            <Link href="/privacy-policy" className="text-[#72727]">Privacy Policy</Link>
+            <Link href="https://capsai.co/terms-conditions" className="text-[#72727]">Terms & Conditions</Link>
+            <Link href="https://capsai.co/privacy-policy" className="text-[#72727]">Privacy Policy</Link>
           </div>
         </div>
       )}
@@ -116,7 +116,7 @@ const SidebarMenu = ({
         <Button
           name="Get Started"
           buttonColor={isDarkTheme ? 'bg-black' : 'bg-[#FFFFFF08] shadow-[inset_-2px_2px_20px_0px_#FFFFFFEB]'}
-          onClick={() => router.push('/login')}
+          onClick={() => { if (typeof window !== 'undefined') window.location.href = 'https://capsai.co/login' }}
         />
       )}
     </div>

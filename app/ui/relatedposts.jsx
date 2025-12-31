@@ -62,7 +62,7 @@ const RelatedPosts = ({ blogs, blogId }) => {
           >
             Related Posts
           </div>
-          <Link href={"/blog"} className="underline text-[14px] md:text-[18px] mt-7">
+          <Link href={"https://capsai.co/blog"} className="underline text-[14px] md:text-[18px] mt-7">
             View all
           </Link>
         </div>

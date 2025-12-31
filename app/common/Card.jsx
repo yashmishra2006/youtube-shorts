@@ -27,7 +27,7 @@ export default function Card({
         {text2 && <p className="text-sm md:text-lg ">{text2}</p>}
 
         {buttonName && (
-          <Link className=" w-fit h-fit" href="/upload-video">
+          <Link className=" w-fit h-fit" href="https://capsai.co/upload-video">
             <Button
               onClick={buttonOnClick}
               className={buttonClass}

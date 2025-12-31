@@ -6,7 +6,7 @@ export default function HomeNavBar() {
   return (
     <div className=" md:hidden flex justify-end items-center py-3  px-4 pt-3 pb-3">
       <div className="md:hidden">
-        <Link href="/" className="">
+        <Link href="https://capsai.co/" className="">
           <Image width={100} src={logo} alt="Image" />
         </Link>
       </div>

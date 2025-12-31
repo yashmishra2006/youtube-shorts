@@ -5,7 +5,11 @@ const BlogCard = ({ blog }) => {
   
   return (
     <>
-      <Link href={blog.Language ? `/auto-subtitle-generator/${blog.Language}` : `/blog/${blog.slug.current}`} className="">
+      <Link href={
+        blog.Language
+          ? `https://capsai.co/auto-subtitle-generator/${blog.Language}`
+          : `https://capsai.co/blog/${blog.slug.current}`
+      } className="">
         <Image
          src={urlFor(blog.titleImage).url()} 
           alt={blog.title}

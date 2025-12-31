@@ -39,14 +39,17 @@ export default function Navbar() {
 
   const handleSelect = (path) => {
     setIsOpen(false);
-    router.push(path);
+    if (typeof window !== "undefined") {
+      const target = path && path.startsWith("http") ? path : `https://capsai.co${path}`;
+      window.location.href = target;
+    }
   };
 
   return (
     <div className="w-full bg-white dark:bg-black" style={{ fontFamily: 'var(--font-gilroy)' }}>
       {/* DESKTOP */}
       <div className="hidden md:flex items-center justify-between px-7 pt-8 pb-3">
-        <Link href="/">
+        <Link href="https://capsai.co/">
           <Image
             width={140}
             height={140}
@@ -56,11 +59,11 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-10">
-          <Link href="/pricing" className="dark:text-[#B3B3B3]">
+          <Link href="https://capsai.co/pricing" className="dark:text-[#B3B3B3]">
             Pricing
           </Link>
 
-          <Link href="/blog" className="dark:text-[#B3B3B3]">
+          <Link href="https://capsai.co/blog" className="dark:text-[#B3B3B3]">
             Blogs
           </Link>
 
@@ -98,7 +101,9 @@ export default function Navbar() {
           </div>
 
           <button
-            onClick={() => router.push("/login")}
+            onClick={() => {
+              if (typeof window !== "undefined") window.location.href = "https://capsai.co/login";
+            }}
             className="px-6 py-3 rounded-full bg-black text-white dark:bg-[#FFFFFF08] dark:shadow-[inset_-2px_2px_20px_0px_#FFFFFFEB]"
           >
             Get Started
@@ -110,7 +115,7 @@ export default function Navbar() {
 
       {/* MOBILE */}
       <div className="fixed top-0 left-0 z-50 md:hidden w-full flex items-center justify-between px-5 py-3 bg-white dark:bg-[#121214] border-b">
-        <Link href="/">
+        <Link href="https://capsai.co/">
           <Image
             width={100}
             src={theme === "dark" ? logoDark : logo}

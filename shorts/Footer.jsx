@@ -60,11 +60,11 @@ export default function Footer() {
           />
         </div>
         <div className="flex flex-col mb-6 item-center justify-center text-center gap-[24px]">
-          <Link href={"/auto-subtitle-generator"}>
+          <Link href={"https://capsai.co/auto-subtitle-generator"}>
             Subtitles in any language
           </Link>
-          <Link href={"/instagram-video-downloader"}>Instagram Video Downloader</Link>
-          <Link href={"/blog"}>Blogs</Link>
+          <Link href={"https://capsai.co/instagram-video-downloader"}>Instagram Video Downloader</Link>
+          <Link href={"https://capsai.co/blog"}>Blogs</Link>
         </div>
         <div className="flex items-center justify-center gap-5 mb-2 text-sm font-light">
           <Link href={"/terms-and-conditions"} className="duration-300 ">
@@ -134,26 +134,26 @@ export default function Footer() {
               <div className="flex flex-row w-full gap-10">
                 <div className="text-[14px] flex flex-col items-end justify-end">
                   <Link
-                    href={"/blog"}
+                    href={"https://capsai.co/blog"}
                     className="hover:text- duration-300 py-2.5 whitespace-nowrap"
                   >
                     Blogs
                   </Link>
 
                   <Link
-                    href={"/instagram-video-downloader"}
+                    href={"https://capsai.co/instagram-video-downloader"}
                     className="hover:text- duration-300 py-2.5 whitespace-nowrap"
                   >
                     Instagram Video Downloader
                   </Link>
                   <Link
-                    href={"/youtube-short-downloader"}
+                    href={"https://capsai.co/youtube-short-downloader"}
                     className="hover:text- duration-300 py-2.5 whitespace-nowrap"
                   >
                     Youtube short downloader
                   </Link>
                   <Link
-                    href={"/auto-subtitle-generator"}
+                    href={"https://capsai.co/auto-subtitle-generator"}
                     className="hover:text- duration-300 py-2.5 whitespace-nowrap"
                   >
                     Subtitles in any language
@@ -161,26 +161,26 @@ export default function Footer() {
                 </div>
                 <div className="text-[14px] flex flex-col items-end">
                   <Link
-                    href={"/"}
+                    href={"https://capsai.co/"}
                     className="hover:text- duration-300 py-2.5 whitespace-nowrap"
                   >
                     About Us
                   </Link>
                   <Link
-                    href={"/"}
+                    href={"https://capsai.co/"}
                     className="hover:text- duration-300 py-2.5 whitespace-nowrap"
                   >
                     Contact Us
                   </Link>
 
                   <Link
-                    href={"/privacy-policy"}
+                    href={"https://capsai.co/privacy-policy"}
                     className="hover:text- duration-300 py-2.5 whitespace-nowrap"
                   >
                     Privacy policy
                   </Link>
                   <Link
-                    href={"/terms-and-conditions"}
+                    href={"https://capsai.co/terms-and-conditions"}
                     className="hover:text- duration-300 py-2.5 whitespace-nowrap"
                   >
                     Terms & Conditions

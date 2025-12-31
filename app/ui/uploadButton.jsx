@@ -8,7 +8,7 @@ const button = ({ buttonname }) => {
   const { theme } = useTheme();
   return (
     <>
-      <Link className="" href="/">
+      <Link className="" href="https://capsai.co/">
         <div
           className="flex h-[51px] justify-center items-center py-4 px-8 rounded-full"
           style={

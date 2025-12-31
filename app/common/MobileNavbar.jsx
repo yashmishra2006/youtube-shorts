@@ -42,7 +42,10 @@ const MobileNavbar = ({
 
   const handleNavigate = (path) => {
     setIsOpen(false);
-    router.push(path);
+    if (typeof window !== "undefined") {
+      const target = path && path.startsWith("http") ? path : `https://capsai.co${path}`;
+      window.location.href = target;
+    }
   };
 
   
@@ -53,7 +56,7 @@ const MobileNavbar = ({
                 flex flex-col gap-7 h-[100vh] border-r-2 border w-[80%] z-50 bg-white dark:bg-[#29292B] dark:border-[#29292B]  duration-300 p-5 pl-7 sm:pl-15`}
     >
       <div className="flex items-center justify-between text-black">
-        <Link href="/" className="">
+        <Link href="https://capsai.co/" className="">
           <Image
             width={150}
             height={60}
@@ -77,7 +80,7 @@ const MobileNavbar = ({
           {menuItems.map((item, index) => (
             <li key={index}>
               <Link
-                href={item.href}
+                href={item.href && item.href.startsWith("http") ? item.href : `https://capsai.co${item.href}`}
                 className="flex items-center p-4 hover:text-black hover:font-bold rounded-[8px] gap-4 text-gray-700 hover:bg-[#F5F5F5] dark:text-gray-200 dark:hover:bg-gray-800"
               >
                 {item.icon && (
@@ -217,20 +220,20 @@ const MobileNavbar = ({
         </div>
       ) : (
         <div className="">
-          <Button
+            <Button
             name={"Get Started"}
             buttonColor={
               theme === "dark"
                 ? "bg-[#FFFFFF08] shadow-[inset_-2px_2px_20px_0px_#FFFFFFEB]"
                 : "bg-black"
             }
-            onClick={() => router.push("/login")}
+            onClick={() => { if (typeof window !== "undefined") window.location.href = "https://capsai.co/login" }}
           />
         </div>
       )}
       {loggedIn && (
         <Link
-          href="/"
+          href="https://capsai.co/"
           className="flex items-center justify-center gap-3 px-0 py-2 border rounded-full border-stone-300 text-stone-700 dark:text-stone-400 w-[75%]"
           onClick={handleLogout}
         >

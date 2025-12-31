@@ -14,7 +14,7 @@ export default function UploadVideoNavbar() {
       </div>
       <div className="flex md:hidden items-center gap-2 ml-auto">
         <Link
-          href="/upload-video"
+          href="https://capsai.co/upload-video"
           className="py-2 px-4 rounded-full text-stone-700 bg-white border border-stone-300 font-medium"
         >
           Upload new
